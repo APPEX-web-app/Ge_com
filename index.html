@@ -736,6 +736,7 @@ function renderAdminPanel(){
 
 function showBucketHelp(){ const e=document.getElementById('bucketHelp'); if(e) return; const d=document.createElement('div'); d.id='bucketHelp'; d.style.cssText='background:rgba(255,200,0,.08);border:1px solid rgba(255,200,0,.25);padding:16px;margin-top:16px;font-size:13px;color:rgba(255,255,255,.6);line-height:1.7;'; d.innerHTML=`<strong style="color:#FFD700">⚠ Storage bucket missing</strong><br/>Supabase → <b>Storage</b> → <b>New Bucket</b><br/>Name: <code style="background:rgba(255,255,255,.1);padding:2px 6px;">product-images</code> ✅ Public → Save.`; document.querySelector('.adm-form').appendChild(d); }
 
+
 // ══ TOAST ══
 function toast(msg,type=''){ const w=document.getElementById('toastWrap'),t=document.createElement('div'); t.className='toast'+(type?' '+type:''); t.textContent=msg; w.appendChild(t); setTimeout(()=>t.remove(),3500); }
 </script>
