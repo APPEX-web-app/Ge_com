@@ -449,9 +449,10 @@ footer p{font-size:13px;line-height:1.7;max-width:280px;}
       e.preventDefault(); e.stopPropagation(); return false;
     }
   });
+  const isMobile=/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)||('ontouchstart' in window);
   const threshold=160;
   setInterval(()=>{
-    if(window.outerWidth-window.innerWidth>threshold||window.outerHeight-window.innerHeight>threshold){
+    if(!isMobile&&(window.outerWidth-window.innerWidth>threshold||window.outerHeight-window.innerHeight>threshold)){
       document.body.innerHTML=''; window.location.reload();
     }
   },1000);
