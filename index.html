@@ -725,6 +725,7 @@ function clearForm(){
   document.getElementById('submitBtn').textContent='+ Add to Store'; document.getElementById('cancelBtn').style.display='none';
 }
 
+
 async function savePhone(){ const ph=document.getElementById('aPhone').value.trim(); if(!ph){ toast('⚠ Enter a WhatsApp number','err'); return; } try{ await sbSetSetting('admin_phone',ph); adminPhone=ph; toast('✓ WhatsApp number saved!','ok'); }catch(e){ toast('⚠ Error: '+e.message,'err'); } }
 
 // ══ ADMIN PANEL ══
